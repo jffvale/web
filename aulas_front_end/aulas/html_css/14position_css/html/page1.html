@@ -1,0 +1,131 @@
+<!-- Position não é uma tag HTML5, mas sim uma propriedade CSS que controla o posicionamento de elementos em uma página web. 
+
+Essa propriedade é usada para determinar como um elemento deve ser posicionado em relação aos seus elementos pai e vizinhos. 
+
+A propriedade position é frequentemente usada em conjunto com outras propriedades CSS, como top, right, bottom, left, para 
+ajustar ainda mais o posicionamento do elemento na página.
+
+Aqui estão alguns dos valores que a propriedade position pode ter:
+
+    static:
+        Este é o valor padrão.
+        Elementos com position: static; são posicionados de acordo com o fluxo normal do documento, o que significa que eles 
+        serão exibidos na ordem em que aparecem no código HTML.
+
+    relative:
+        Elementos com position: relative; são posicionados em relação à sua posição original no layout normal.
+        Se você usar propriedades como top, right, bottom ou left, o elemento será movido a partir de sua posição original.
+
+    absolute:
+        Elementos com position: absolute; são removidos do fluxo normal do documento e posicionados em relação ao elemento 
+        pai mais próximo que não tem position: static; (ou ao elemento <html> se nenhum elemento pai atender a esse critério).
+        Se não houver um elemento pai que atenda a esses critérios, o elemento com position: absolute; será posicionado em 
+        relação ao elemento <html>.
+        Este valor é frequentemente usado para criar layouts complexos.
+
+    fixed:
+        Elementos com position: fixed; são removidos do fluxo normal do documento e são posicionados em relação à janela 
+        de visualização (a área visível na tela), permanecendo fixos mesmo quando a página é rolada.
+        Isso é comumente usado para criar barras de navegação que permanecem visíveis enquanto o usuário rola a página.
+
+    sticky:
+        Elementos com position: sticky; são um tipo híbrido entre relative e fixed.
+        O elemento é tratado como relative até que ele atinja um determinado ponto durante o rolar da página, momento em 
+        que se torna fixed.
+
+    Da para fazer teste e ver efeitos das mudanças no site da MOZILLA: https://developer.mozilla.org/pt-BR/docs/Web/CSS/position
+ -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../css/styleindex.css">
+    <link rel="stylesheet" href="../css/14style.css" type="text/css">
+    <title>Position com Imagem</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Exemplo de Position com Imagem</h1>
+    </header>
+
+    <nav>
+        <a href="page1.html">Exemplo 1</a>
+        <a href="../html/page2.html">Exemplo 2</a>
+        <a href="../position.html">Inicial Position</a>
+        <a class="home" href="../../../../index.html">Home</a>
+    </nav>
+
+    <main>
+        <p>Position não é uma tag HTML5, mas sim uma propriedade CSS que controla o posicionamento de elementos em uma
+            página web.</p>
+        <p>Essa propriedade é usada para determinar como um elemento deve ser posicionado em relação aos seus elementos
+            pai e vizinhos.</p>
+        <P>A propriedade position é frequentemente usada em conjunto com outras propriedades CSS, como top, right,
+            bottom, left, para
+            ajustar ainda mais o posicionamento do elemento na página.</P>
+        <p>Aqui estão alguns dos valores que a propriedade position pode ter:</p>
+
+        <div class="image-container">
+            <img src="../img/castelmezzano-1979546_1280.jpg" width="300" height="300" alt="Imagem de Exemplo">
+        </div>
+        <ul>
+            <li>static:</li>
+            <p>Este é o valor padrão.</p>
+            <p>Elementos com <span class="destaque">position: static;</span> são posicionados de acordo com o
+                fluxo normal do documento, o que significa que eles
+                serão exibidos na ordem em que aparecem no código HTML.</p>
+            <br>
+
+            <li>relative:</li>
+            <p>Elementos com <span class="destaque">position: relative;</span> são posicionados em relação à sua
+                posição original no layout normal.</p>
+            <p>Se você usar propriedades como top, right, bottom ou left, o elemento será movido a partir de sua posição
+                original.</p>
+            <br>
+
+            <li>absolute:</li>
+            <p></p>
+            <p>Elementos com <span class="destaque">position: absolute;</span> são removidos do fluxo normal do
+                documento e posicionados em relação ao elemento pai mais próximo que não tem position: static; (ou ao
+                elemento &lt;html&gt; se nenhum elemento pai atender a esse critério).</p>
+            <p>Se não houver um elemento pai que atenda a esses critérios, o elemento com position: absolute; será
+                posicionado em relação ao elemento &lt;html&gt;.</p>
+            <p> Este valor é frequentemente usado para criar layouts complexos.</p>
+            <br>
+
+            <li>fixed:</li>
+            <p>Elementos com <span class="destaque">position: fixed;</span> são removidos do fluxo normal do documento e
+                são posicionados em relação à janela de visualização (a área visível na tela), permanecendo fixos mesmo
+                quando a página é rolada.</p>
+            <p>Isso é comumente usado para criar barras de navegação que permanecem visíveis enquanto o usuário rola a
+                página.</p>
+
+            <li>sticky:</li>
+            <p>Elementos com <span class="destaque">position: sticky;</span> são um tipo híbrido entre relative e fixed.
+            </p>
+            <p>O elemento é tratado como relative até que ele atinja um determinado ponto durante o rolar da página,
+                momento emque se torna fixed.</p>
+
+
+
+
+            position: ;
+
+
+            Da para fazer teste e ver efeitos das mudanças no site da MOZILLA:
+            https://developer.mozilla.org/pt-BR/docs/Web/CSS/position</li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>Rodapé - © 2023 Meu Exemplo</p>
+    </footer>
+
+</body>
+
+</html>

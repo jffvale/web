@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    /* padding: 0;
+    width: 400px;
+    height: 300px; */
+    background-image: url(../image/winter-landscape-2571788_1920.jpg);
+    background-size: cover;
+}
+
+.fotos {
+    display: flex, inline;
+    justify-content: center;
+
+    list-style: none;
+    margin-right: 15px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* width: 400px; */
+    height: 50px;
+}
+
+.fotos a {
+    display: inline;
+}
+
+/* 
+div img{
+    display: inline;
+    margin-right: 15px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 400px;
+    height: 300px;    
+}
+
+div li a figure img{
+    display: inline;
+    margin-right: 15px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 400px;
+    height: 300px;
+} */
+
+header,
+nav,
+section,
+footer {
+    margin: 20px;
+    padding: 20px;
+}
+
+header {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+}
+
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+footer {
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* position: absolute;
+    bottom: 0;
+    left: 0; */
+}

@@ -1,0 +1,78 @@
+body{
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 5px;
+    text-align: center;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+/* Coloca os 3 itens do " nav li" em linha */
+nav li{
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+main{
+    padding: 20px;
+}
+
+/* "#" se refere a um ID */
+#intro-section{
+    text-align: center;
+}
+
+/* "." se refere a uma classe */
+.section-title{
+    color: #e74c3c;
+}
+
+/* Colocando as section em linha*/
+#feature-section{
+    display: flex;
+    justify-content: space-around;
+    margin: top;
+}
+
+/* Colocando borda nas "div" */
+.feature-box{
+    text-align: center;
+    padding: 20px;
+    border: 1px solid#3498db;
+    border-radius: 8px;
+}
+
+.feature-title{
+    color: #2ecc71;
+}
+
+footer{
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    /* coloca o footer na base da página, 3 linhas abaixo */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Coloca os 3 itens do " footer h1" em linha */
+footer h1{
+    display: inline;
+    margin-right: 20px;
+}

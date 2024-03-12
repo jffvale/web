@@ -1,0 +1,16 @@
+/* Tamanho para Header e para Menu, mexemos apenas na Altura (vh - Viewport height. */
+/* A largura mexeremos via Bootstrap */
+header{
+    height: 15vh;
+    margin-bottom: 0px;
+}
+
+/* nav{
+    margin-left: -11.3%;
+    margin-right: -11.1%;
+} */
+
+main{
+    /* Ajustou o decimal para eliminar a barra de rolagem, que pode aparecer em algum navegador */
+    height: 84.5vh;
+}

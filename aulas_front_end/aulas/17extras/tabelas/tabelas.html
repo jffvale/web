@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../css/styleindex.css" type="text/css">
+    <title>Exemplo Tabelas</title>
+    <style>
+        /* Colocar borda na tabela */
+        #section1 table,
+        tr,
+        td,
+        th {
+            border: 1px solid black;
+        }
+
+        /* Colocar borda na tabela */
+        #section2 tr,
+        td,
+        th {
+            border: 1px solid black;
+        }
+
+        caption {
+            font-size: 20px;
+        }
+
+        thead {
+            font-size: 25px;
+            background-color: lightgray;
+            text-align: center;
+        }
+
+        .col {
+            background-color: rgb(125, 226, 43);
+        }
+
+        /* back ground cabeçalho */
+        #col1 {
+            background-color: cadetblue;
+        }
+
+        #esp,
+        #esp1 {
+            color: blue;
+        }
+
+        .espaco {
+            padding: 10px;
+            text-align: center;
+        }
+
+        tfoot {
+            font-size: 25px;
+            background-color: aquamarine;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Bem-vindo ao curso de Front End do SENAC - Tabelas Exemplos</h1>
+    </header>
+
+    <nav>
+        <a href="futebol.html">aula 09</a>
+        <a href="basquete.html">aula 10</a>
+        <a href="natacao.html">aula 11</a>
+        <a href="volei.html">aula 12</a>
+        <a href="./aulas/text_efeitos/index.html">aula 13</a>
+        <a href="./aulas/text_efeitos/index.html">aula 14</a>
+        <li class="atual">Extras - Tabelas</li>
+        <a class="html" href="../../html_css/html_css.html">HTML5 e CSS3 - by Henrique</a>
+        <a class="js" href="../../js_frontend/js-bootstrap.html">JS e BS</a>
+        <a class="home" href="../../../index.html">Home</a>
+    </nav>
+
+    <section>
+        <h3>Colocar borda na tabela com CSS3.</h3>
+        <p>Envolvendo com borda os elementos abaixo:</p>
+        <p>A tabela"table", e os componentes secundários da tabela ,
+            as linhas "tr", as colunas "td" e o cabeçalho "th".</p>
+        <p><span#section1 table, tr, td, th {</p>
+            <p>border: 1px solid black;
+            }</p>
+    </section>
+
+    <section id="section1">
+        <table>
+
+            <!-- Legenda superior da Tabela, "<caption>" -->
+            <caption>Estoque de Livros</caption>
+            <thead>
+                <tr>
+                    <th>LIVROS</th>
+                    <th>QUANTIDADE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HTML5 E CSS3</td>
+                    <td>120</td>
+                </tr>
+                <tr>
+                    <td>Photoshop</td>
+                    <td>130</td>
+                </tr>
+                <tr>
+                    <td>Banco de Dados</td>
+                    <td>130</td>
+                </tr>
+                <tr>
+                    <td>Lógica de Programação</td>
+                    <td>134</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <!-- O atributo "colspan" mescla colunas -->
+                    <td colspan="2">Livros em Estoque</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+    <br><br><br>
+    <section id="section2">
+        <table>
+
+            <caption>Catálogo de Instrumentos Musicais</caption>
+            <thead>
+                <tr id="col1">
+                    <th colspan="4">Valores</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">Novos</td>
+                    <td id="esp" class="col espaco">Guitarra</td>
+                    <td class="col espaco">Violão</td>
+                    <td class="col espaco">Teclado</td>
+                </tr>
+                <tr>
+                    <td id="esp1" class="espaco">R$ 750,00</td>
+                    <td class="espaco">R$ 650,00</td>
+                    <td class="espaco">R$ 1.200,00</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">Visite nossa loja virtual.www</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+    <footer>
+        by Milton
+    </footer>
+</body>
+
+</html>

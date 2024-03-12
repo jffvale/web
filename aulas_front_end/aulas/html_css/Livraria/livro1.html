@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O medalhão das 9 esferas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        footer {
+            margin-top: 20px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        nav {
+            margin-top: 10px;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        header {
+            text-align: center;
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+        }
+
+        /* div a "muda a cor para todos os elementos que se encontra em uma tag <a>, dentro de uma tag <div>" */
+        div a {
+            color: #F4A460;
+        }
+
+        /* :hover muda a cor do elemento quando passa o mouse por ele, mas esse elemento tem que estar
+         dentro de uma tag <a>, dentro de uma tag <div>*/
+        div a:hover {
+            color: #3498db;
+        }
+    </style>
+</head>
+
+<body>
+    <a id="top"></a>
+
+    <header>
+        <h1>O medalhão das 9 esferas</h1>
+    </header>
+
+    <section>
+        <h2>Sinopse</h2>
+        <p>A cidade de Elenor é o lar de Sam e Will, dois garotos jovens e curiosos que amam histórias
+            sobre o passado distante, repleto de criaturas, batalhas e magia. Após testemunharem o
+            assassinato brutal do pai, seus poderes despertam e os dois se veem a caminho da capital,
+            para ingressar na renomada ordem dos andruins, onde enfrentarão perigos mortais saídos diretamente
+            dos mitos e lendas que tanto amam.</p>
+        <p>Livro de um autor jovem e surpreendente.</p>
+
+        <figure>
+            <img src="medalhao.jpg" alt="o medalhão das 9 esferas" width="300">
+            <figcaption><b>O medalhão das 9 esferas</b></figcaption>
+            <a href="#top">top</a>
+        </figure>
+
+    </section>
+
+    <footer>
+        <div>
+            <a href="index.html">Home</a>
+            <!-- ISSO FIXOU A COR <a href="index.html"><font color="#F4A460">Home</font></a> -->
+        </div>
+        <p>&copy; 2024 Livraria Online</p>
+    </footer>
+
+</body>
+
+</html>

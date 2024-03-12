@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="" type="text/css">
+    <title>Exemplo sobre eventos com JavaScript</title>
+</head>
+
+<body>
+
+    <!-- A tag <script></script> pode ser colocada em 3 posições, próximo de onde será usada,
+    no <head> e/ou coloca-lo no final da página acima da tag <body>, o melhor é essa última. -->
+    <figure>
+        <!-- Tag melhor para semntica (SEO) que vai dar maior rank para o sistema de busca 
+        na imagem vamos criar um evento de "click" -->
+        <img src="./img/presente-fechado.gif" alt="Presente Fechado" id="presente">
+        <!-- <figcaption>Teste com figcaption</figcaption>
+        onmouseleave  -> o evento acontece quando você tira o mouse em cima da figura
+        onmouseenter  -> o evento acontece quando você entra na área -->
+    </figure>
+
+    <!-- JavaScript -->
+    <script>
+        function teste() {
+            alert('Você clicou na imagem');
+        }
+
+        window.onload = function () {
+            // Função anônima se declara "function ()"
+            // não há necessidade de usar a palavra reservada "var" ou "let", dar preferia para o "let" por SEO
+            // É só uma questão de boa prática ou semântica
+            presente = document.querySelector("#presente");
+            // avisar a imagem que haverá um evento de click
+            // mouseleave  -> o evento acontece quando você tira o mouse em cima da figura
+            // mouseenter  -> o evento acontece quando você entra na área
+            presente.addEventListener("click", t => {
+
+                if (presente.alt == 'Presente Fechado') {
+                    presente.src = "./img/presente-aberto.gif";
+                    presente.alt = "Presente Aberto";
+                } else {
+
+                    presente.src = "./img/presente-fechado.gif";
+                    presente.alt = "Presente Fechado";
+                }
+            });
+        }
+
+
+    </script>
+</body>
+
+</html>

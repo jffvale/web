@@ -1,0 +1,116 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-image: url(../img/colors-1242661_1280.jpg);
+    background-size: cover; */
+}
+
+header {
+    background-color: #f8d9e3;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #3d3d3d;
+    font-weight: bold;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #3d3d3d;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    background-image: url(../img/colors-1242661_1280.jpg);
+    background-size: cover;
+}
+
+main img {
+    height:80px;
+    opacity : 0.5;
+}
+
+/* .cake-container{
+    background: #ffffff;
+} */
+
+/* main section {
+    display: inline;
+} */
+
+section {
+    text-align: center;
+}
+
+footer {
+    background-color: #f8f6f7;
+    padding: 10px;
+    text-align: center;
+    /* coloca o footer na base da página, 3 linha abaixo */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#titulo-principal {
+    color: #e44d26;
+    font-size: 4rem
+    /* Cor personalizada para o título principal */
+}
+
+#titulo-cupcake {
+    color: #e44d26;
+    font-size: 4em;
+    /* Cor personalizada para o título principal */
+}
+
+#bem-vindo {
+    text-align: center;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    color: #26e436;
+    font-size: 3em;
+    font-weight: bolder;
+    /* Cor personalizada para o título de boas-vindas */
+}
+
+.paragrafo-introducao {
+    text-align: center;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    color: rgb(0, 68, 255);
+    font-size: 2em;
+}
+
+.cupcake-container {
+    margin-right: 15px;
+}
+
+figure figcaption{
+    background-color: #ffffff;
+}
+
+#fotos {
+    /* colocar em linha as figuras */
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: 25% 25% 25% 25%; */
+    gap: 2;
+    margin: 0px auto;
+    
+}
+

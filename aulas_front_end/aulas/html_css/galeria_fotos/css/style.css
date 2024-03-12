@@ -1,0 +1,85 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+/* "#" se refere a um ID */
+#intro-section {
+    text-align: center;
+}
+
+/* "." se refere a uma classe */
+.section-title {
+    color: #e74c3c;
+}
+
+.photo-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.photo-container {
+    margin: 10px;
+}
+
+.photo-container img {
+    max-width: 100%;
+    height: auto;
+    /* border-radius: 8px; */
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.photo-container img:hover {
+    transform: scale(1.1);
+}
+
+/* aumenta a imagem para a largura do container */
+.large {
+    width: 100%;
+}
+
+figcaption {
+    font-size: 2rem;
+    color: crimson;
+    text-align: center;
+}
+
+footer {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 5px;
+    text-align: center;
+    /* coloca o footer na base da página, 3 linhas abaixo */
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+}

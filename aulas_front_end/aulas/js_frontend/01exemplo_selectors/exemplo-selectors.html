@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Selectors</title>
+</head>
+
+<body>
+    <form>
+        <!-- O atributo "name" identifica diferentes componentes -->
+        <label for="nome">Digite seu nome</label>
+        <input type="text" name="nome" id="nome" class="texto">
+        <label for="telefone">Digite seu telefone</label>
+        <input type="text" name="telefone" id="telefone" class="texto">
+        <label for>Selecione se possui CNH</label>
+        Sim<input type="radio" name="cnh" id="cnh-sim" class="cnh">
+        Não<input type="radio" name="cnh" id="cnh-nao" class="cnh">
+    </form>
+    <div>
+        <figure>
+            <img src="img/selectors.jpg" alt="figura console browser1">
+        </figure>
+    </div>
+    <section>
+        <p>Seletores são métodos do objeto Document, que basicamente é a sua
+            página web.
+            Esses métodos permitem que você selecione algumas tags HTML (e
+            seu conteúdo),
+            permitindo depois que você manipule o conteúdo e propriedades
+            dessas tags.</p>
+
+        <div class="code">
+
+            <p class="ede0"><span class="col1">&lt;div</span> <span class="col2">id=</span><span
+                    class="col3">"primeiro-conteudo"</span>
+                <span class="col2">class=</span><span class="col3">"conteudo"</span><span class="col1">&gt;</span>
+            </p>
+
+            <p class="ede1"><span class="col1">&lt;ul</span> <span class="col2">class=</span><span
+                    class="col3">"usuarios"</span><span class="col1">&gt;</span></p>
+            <p class="ede2"><span class="col1">&lt;li </span><span class="col2">class=</span><span
+                    class="col3">"amigo"</span><span class="col1">&gt;</span>João<span class="col1">&lt;/li&gt;</span>
+            </p>
+            <p class="ede2"><span class="col1">&lt;li </span><span class="col2">class=</span><span
+                    class="col3">"inimigo"</span><span class="col1">&gt;</span>Fernanda<span
+                    class="col1">&lt;/li&gt;</span></p>
+            <p class="ede2"><span class="col1">&lt;li </span><span class="col2">class=</span><span
+                    class="col3">"amigo"</span><span class="col1">&gt;</span>Amanda<span class="col1">&lt;/li&gt;</span>
+            </p>
+            <p class="ede1"><span class="col1">&lt;/ul&gt;</span></p>
+            <p class="ede0"><span class="col1">&lt;/div&gt;</span></p>
+
+            <p class="ede0"><span class="col1">&lt;div </span><span class="col2">id=</span><span
+                    class="col3"></span><span class="col3">"segundo-conteudo"</span>
+                <span class="col2">class=</span><span class="col3">"conteudo"</span><span class="col1">&gt;</span>
+            </p>
+            <p class="ede1"><span class="col1">&lt;p </span><span class="col2">id=</span><span
+                    class="col3">"descricao"</span><span class="col1">&gt;</span>Estou descrevendo alguma
+                coisa<span class="col1">&lt;/p&gt;</span></p>
+            <p class="ede0"><span class="col1">&lt;/div&gt;</span></p>
+
+            <p class="ede0"><span class="col1">&lt;div </span><span class="col2">id=</span><span
+                    class="col3">"terceiro-conteudo"</span>
+                <span class="col2">class=</span><span class="col3">"conteudo"</span><span class="col1">&gt;</span>
+            </p>
+            <p class="ede1"><span class="col1">&lt;input </span><span class="col2">type=</span><span
+                    class="col3">"text"</span>
+                <span class="col2">name=</span><span class="col3">"opiniao"</span><span class="col1">
+                    /&gt;</span>
+            </p>
+            <p class="ede0"><span class="col1">&lt;/div&gt;</span></p>
+
+        </div>
+
+        <p>* * *</p>
+        <h3>
+            <li>document.getElementById()</li>
+        </h3>
+        <p>Este método é o mais simples de todos, e retorna um elemento
+            correspondente ao id passado como parâmetro (em formato
+            string).</p>
+        <p>Caso mais de um elemento possua o id passado como parâmetro, a
+            função retorna o primeiro elemento encontrado.Veja o código
+            abaixo.</p>
+
+        <h4>code javascript</h4>
+        <p class="code"><span class="col1">let </span><span class="col2">desc </span>= <span
+                class="col2">document</span><span class="coljs">.getElementById</span><span class="col1">(</span><span
+                class="col3">'descricao'</span><span class="col1">)</span>;</p>
+        <p class="code"><span class="col1">let </span><span class="col2">desc </span>= <span
+                class="col2">document</span><span class="coljs">.querySelector</span><span class="col1">(</span><span
+                class="col3">'#descricao'</span><span class="col1">)</span>;</p>
+
+        <p>Esse comando cria uma variável chamada <span class="italic">desc</span>
+            e armazena nessa
+            variável o elemento cujo <span class="italic">id</span> é igual
+            ao <span class="italic">id</span> passado como
+            parâmetro. Caso este <span class="italic">id</span> não exista
+            dentro do código HTML, o retorno da função é `null`. Agora que o
+            elemento foi armazenado
+            em uma variável, vamor entender o conteúdo desta variável.
+            `desc` é uma variável que armazena um objeto, com diversas
+            propriedades. Se imprimissimos esta variável no console, o
+            resultado seria:</p>
+
+        <h4>html</h4>
+        <p class="code"><span class="col1">&lt;p</span> <span class="col2">id=</span><span
+                class="col3">"descricao"</span><span class="col1">&gt;</span>Estou descrevendo alguma coisa<span
+                class="col1">&lt;/p<span class="col1">&gt;</p>
+
+        <div>
+            <figure>
+                <img src="img/js_console.jpg" alt="figura console browser2">
+            </figure>
+        </div>
+
+        <p>No console do navegador é possível ver as
+            propriedades deste elemento, mas existem duas a
+            serem destacadas:</p>
+        <p>*innerText: Texto de dentro da tag;</p>
+        <p class="code"><span class="col2">console</span><span class="coljs">.log</span>
+            <span class="col1">(</span><span class="col2">desc.innerText</span><span class="col1">)</span>;
+            //Imprime o texto no console
+        </p>
+        <p class="code"><span class="col2">desc</span><span class="coljs">.innerText </span>
+            = <span class="col3">"Uma nova descrição atualizada"</span>;
+            //altera o conteúdo que está dentro
+            da tag no HTML.</p>
+        <p>*innerHTML: HTML de dentro da tag;</p>
+        <p>Agora que conhecemos estas duas propriedades, podemos
+            alterar ou mostrar o conteúdo. Claro que diversas
+            outras operações podem ser realizadas com o objeto
+            selecionado.</p>
+
+        <h3>
+            <li>document.getElementsByClassName()</li>
+        </h3>
+        <p>Como o próprio nome já diz, essa função vai
+            retornar os elementos que possuem uma mesma
+            classe passada como parâmetro em formato string.
+            Todos os elementos que corresponde àquela
+            classe.</p>
+        <p>Enquanto a função anterior retorna um
+            único elemento, esta função retorna uma
+            HTML Collection (uma coleção) de elementos, a não
+            ser que o seletor não seja encontrado na página
+            HTML, então o
+            retorno `null`.</p>
+        <p>No nosso código, temos alguns itens separados nas classes
+            "amigo" e "inimigo".</p>
+
+        <h4>code javascript</h4>
+        <p class="code"><span class="col1">const </span><span class="col2">amigos </span>= <span
+                class="col2">document</span><span class="coljs">.getElementByClassName</span><span
+                class="col1">(</span><span class="col3">'amigo'</span><span class="col1">)</span>;
+        </p>
+
+        <p class="code"><span class="col1">const </span><span class="col2">inimigos </span>= <span
+                class="col2">document</span><span class="coljs">.getElementByClassName</span><span
+                class="col1">(</span><span class="col3">'inimigo'</span><span class="col1">)</span>;
+        </p>
+
+        <div>
+            <figure>
+                <img src="img/js_console2.jpg" alt="figura console browser3">
+            </figure>
+        </div>
+
+        <p>HTMLCollection { 0: li.inimigo, length:1}</p>
+        <p>OU seja, um objeto do tipo HTMLCollection, que possui
+            comprimento de 1 e possui um objeto `li.inimigo` na
+            posição 0. Essa saída, é a padrão do `console.log()`, e
+            caso quisessemos acessar as propriedades do único objeto
+            presente nesta coleção, podemos acessar este objeto com
+            a notação de colchetes, e depois acessar as propriedades
+            do objeto.
+        </p>
+
+        <p class="code"><span class="col2">console</span><span class="coljs">.log</span><span class="col1">(</span><span
+                class="col3">inimigos[0]</span><span class="col1">)</span>;
+        </p>
+
+        <h3>
+            <li>document.getElementsByTagName()</li>
+        </h3>
+        <p>Esta função é bem similar à anterior, com a diferença que
+            cria uma coleção selecionando TODAS as tags com o mesmo
+            nome, por exemplo `p`, `div`, ou `li`(lembrando que este
+            nome deve ser passado como string).</p>
+
+        <p class="code"><span class="col1">let </span><span class="col2">partesDoConteudo </span>= <span
+                class="col2">document</span><span class="coljs">.getElementByTagName</span><span
+                class="col1">(</span><span class="col3">'div'</span><span class="col1">)</span>;
+        </p>
+
+        <p>O conteúdo do método <span class="italic">getElementByTagName()</span> é
+            semelhante ao <span class="italic">getElementsByClassName()</span>.</p>
+        <p>HTMLCollection { 0: div#primeiro-conteudo.conteudo, 1:
+            div#segundo-conteudo.conteudo, 2:
+            div#terceiro-conteudo.conteudo, length: 3, … }
+        </p>
+        <p>Todos os objetos com a classe `div` foram selecionados,
+            tendo também seus <span class="italic">ids</span>
+            especificados, embora estes <span class="italic">ids</span> tenham sido irrelevantes
+            na seleção. Assim como no método <span class="italic">getElementsByClassName()</span>, os
+            objetos desta coleção devem ser acessados com a notação
+            de colchetes, para que então você consiga acessar os
+            atributos deste objeto.</p>
+
+
+
+
+        ~~~javascript
+        partesDoConteudo[0].innerText;
+        partesDoConteudo[1].innerHTML;
+        ~~~
+        Mesmo que haja apenas um elemento com esta classe
+
+        ## document.getElementsByName()
+        Assim como os outros métodos que contém plural no nome, este
+        método também retorna uma coleção HTML, selecionando os
+        trechos de código pelo atributo `name` das tags HTML.
+        (Reveja o código exemplo no início do artigo)
+        ~~~javascript
+        let opiniaoUsuario =
+        document.getElementsByName("opiniao");
+        ~~~
+        Como só temos um elemento com o atributo `name`
+        selecionado,
+        quando tentarmos imprimir a variável opiniaoUsuario,
+        teremos
+        uma coleção com um único objeto, que assim como nos
+        exemplos
+        anteriores deve ser acessado com a notação de
+        colchetes.
+
+        ## document.querySelector()
+        Este método é relativamente novo no Javascript, e é
+        muito
+        interessante de se usar. Diferentemente dos outros
+        métodos
+        mostrados até agora, o querySelector não recebe um
+        atributo
+        de uma tag HTML como parâmetro, mas recebe o mesmo
+        seletor
+        que seria utilizado em CSS, no formato string. É
+        importante
+        lembrar que como no CSS, a utilização de "." para
+        indicar
+        classes e de "#" para indicar ids é obrigatória.
+        ~~~javascript
+        let inicio =
+        document.querySelector("#primeiro-conteudo");
+        let paragrafo = document.querySelector("p");
+        let textoOpiniao =
+        document.querySelector(".conteudo#terceiro-conteudo input");
+        let conteudoTotal =
+        document.querySelector(".conteudo");
+        ~~~
+        Todas as sintaxes utilizadas no código acima são
+        validas.
+        Podemos utilizar o `querySelector()` para selecionar
+        por
+        id,
+        por classe, por nome de tag ou por uma combinação
+        destes
+        elementos. Um ponto interessante do
+        `querySelector()`, é
+        que
+        essa função só retorna o primeiro elemento
+        encontrado
+        que
+        tem a mesma configuração do seletor passado como
+        parâmetro.
+        Por exemplo, a variável `conteudoTotal` só vai
+        receber o
+        primeiro elemento com a classe `conteudo`, no
+        formato de
+        um
+        único elemento, não de uma coleção. Se quisermos
+        obter
+        todos
+        os elementos que combinam com um mesmo seletor,
+        devemos
+        utilizar o próximo método da lista.
+
+        ## document.querySelectorAll()
+        O querySelectorAll é bem similar ao método
+        querySelector, e
+        também utiliza os seletores do CSS, com a diferença
+        de
+        que
+        retorna uma NodeList (lista de nodos) com todos os
+        elementos
+        que correspondem ao seletor criado. Podemos pensar
+        na
+        NodeList como se fosse um vetor, para facilitar o
+        entendimento, e assim como nas coleções, podemos
+        acessar
+        os
+        elementos através da notação de colchetes.
+        ~~~javascript
+        let paragrafo = document.querySelectorAll("p");
+        let conteudoTotal =
+        document.querySelectorAll(".conteudo");
+        ~~~
+        Caso um único elemento bata com o seletor passado
+        como
+        parâmetro, o resultado será uma NodeList com apenas
+        um
+        elemento, caso contrário, mais elementos estarão
+        dentro
+        deste objeto.
+
+        ## Considerações finais
+        É uma boa prática guardar o resultado de um seletor
+        em
+        uma
+        variável, e apartir desta variável acessar os
+        atributos
+        ou
+        métodos referente ao objeto selecionado, o que
+        facilita
+        a
+        utilização do objeto selecionado dentro do código.
+        Existem também várias maneiras de selecionar
+        elementos,
+        e
+        como programador você deve escolher qual forma
+        melhor se
+        adapta à sua necessidade, sendo que várias dessas
+        são
+        possíveis.
+        Espero que este artigo possa ter ajudado, e boa
+        sorte
+        com
+        seus códigos!
+        </p>
+        <h2>Como mudar a classe de um elemento com JavaScript | Hora de Codar
+            <a href="https://horadecodar.com.br/como-mudar-a-classe-de-um-elemento-com-javascript/">Hora de Codar</a>
+        </h2>
+
+
+        <p><em>Como fazer para mudar a classe de um elemento com JavaScript &#8211; para
+                poder manipular os estilos de CSS que definem a tag.</em></p>
+        <p><strong>JavaScript</strong> e manipulação do <strong>DOM</strong>!</p>
+        <p>Primeiramente vamos selecionar o elemento. Depois devemos deletar a classe que não
+            precisamos mais do elemento e por fim adicionar a classe que desejamos ou pode
+            ser que só vamos adicionar uma classe.Para isso podemos utilizar o código que vamos
+            ver abaixo.</p>
+        <p>Vamos ver isso na prática:</p>
+
+        <!-- Formatado como Código -->
+        <p class="code"><span class="col1">let</span> <span class="col2">el</span> = <span class="col2">
+                document</span><span class="coljs">.getElementById</span><span class="col1">(</span>
+            <span class="col3">'elemento'</span><span class="col1">)</span>;
+        </p>
+        <p>ou</p>
+        <p class="code"><span class="col1">let</span> <span class="col2">el</span> = <span class="col2">
+                document</span><span class="coljs">.querySelector</span><span class="col1">(</span>
+            <span class="col3">'.elemento'</span><span class="col1">)</span>; &#160;&#160;&#160;&#160;&#160;&#160;
+            &#160;&#160;<span class="green">// usa "." para selecionar 
+            uma <span class="italic">classe</span> e "#" para selecionar um <span class="italic">id</span></span>.
+        </p>
+        <p class="code"><span class="col2">el</span><span class="coljs">.classList.remove</span><span class="col1">(</span>
+            <span class="col3">'teste'</span><span class="col1">)</span>;
+        <p class="code"><span class="col2">el</span><span class="coljs">el.classList.add</span><span class="col1">(</span>
+            <span class="col3">'testando'</span><span class="col1">)</span>;
+        </p>
+        <p>Na primeira linha selecionamos o elemento com id <span class="italic">elemento</span>
+            <span class="coljs">.getElementById</span><span class="col1">(</span>
+            <span class="col3">'elemento'</span><span class="col1">).
+        </p>
+        <p>Na segunda linha utilizando a propriedade <span class="italic">classList</span>, que é a
+            coleção de classes do elemento, seguida do método <span class="italic"><strong>remove
+                </strong></span>, que irá remover a classe passada por parâmetro <span class="col1">(</span>
+            <span class="col3">'teste'</span><span class="col1">)</span>.
+        </p>
+        <p>Na terceira linha utilizando a propriedade <span class="italic">classList</span> seguida
+            do método <span class="italic"><strong>add </strong></span>, que irá adicionar a classe passada
+            por parâmetro <span class="col1">(</span>
+            <span class="col3">'testando'</span><span class="col1">)</span>, ou seja, com <strong>add
+            </strong> podemos adicionar classes à um elemento.
+        </p>
+    </section>
+</body>
+
+</html>

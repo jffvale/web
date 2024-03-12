@@ -1,0 +1,109 @@
+header {
+    margin: -20px;
+    padding: 5px;
+    text-align: center;
+    background-color: #790f0f;
+    color: white;
+    padding: px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 5px;
+}
+
+nav {
+    margin: -20px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* Colando com o header */
+    margin-top: 0px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+nav .atual{
+    background-color: white;
+    padding: 3px;
+    font-weight: bolder;
+    color: blue;
+    /* borda - cor, espessura e arredondamento (mais que cinquenta, eliptica */
+    border-radius: 5%;
+    border: 4px solid red;
+}
+
+nav .home{
+    background-color: white;
+    padding: 3px;
+    font-weight: bolder;
+    color: #790f0f;
+    /* borda - cor, espessura e arredondamento (mais que cinquenta, eliptica */
+    border-radius: 20%;
+    border: 2px solid #5BBE42;
+}
+
+nav .html{
+    background-color: white;
+    padding: 3px;
+    font-weight: bolder;
+    color: #bb7f0e;
+    /* borda - cor, espessura e arredondamento (mais que cinquenta, eliptica */
+    border-radius: 20%;
+    border: 2px solid #5BBE42;
+}
+
+nav .js{
+    background-color: white;
+    padding: 3px;
+    font-weight: bolder;
+    color: #088560;
+    /* borda - cor, espessura e arredondamento (mais que cinquenta, eliptica */
+    border-radius: 20%;
+    border: 2px solid #5BBE42;
+}
+
+section{
+    margin-top: 40px;
+}
+
+.italic {
+    font-style: italic;
+    color: blue;
+}
+
+.bold {
+    /* negrito: pode ser usado de 100 a lighter */
+    font-weight: bold;
+    color: blue;
+}
+
+.bold1 {
+    /* negrito: pode ser usado de 100 a lighter */
+    font-weight: bold;
+    font-size: x-large;
+}
+
+
+#spc{
+    list-style-type: square;
+    font-size: larger;
+    color: crimson;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

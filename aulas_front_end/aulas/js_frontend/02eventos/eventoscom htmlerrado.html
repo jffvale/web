@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="" type="text/css">
+    <title>Exemplo sobre eventos com JavaScript</title>
+</head>
+
+<body>
+
+    <!-- IDEAL - Não fazer dessa forma, melhor fazer tudo com JS 
+        A tag <script></script> pode ser colocada em 3 posições, próximo de onde será usada,
+    no <head> e/ou coloca-lo no final da página acima da tag <body>, o melhor é essa última. -->
+    <figure>
+        <!-- Tag melhor para semntica (SEO) que vai dar maior rank para o sistema de busca 
+        na imagem vamos criar um evento de "click" -->
+        <img src="./img/presente-fechado.gif" alt="Presente Fechado" onclick="abrirFechar()" id="presente">
+        <!-- <figcaption>Teste com figcaption</figcaption>
+        onmouseleave  -> o evento acontece quando você tira o mouse em cima da figura
+        onmouseenter  -> o evento acontece quando você entra na área -->
+    </figure>
+
+    <!-- JavaScript -->
+    <script>
+        function teste() {
+            alert('Você clicou na imagem');
+        }
+        function abrirFechar() {
+            /* Armazenando em uma variável, para reduzir o número de buscas na página */
+            presente = document.querySelector("#presente");
+            if (presente.alt == 'Presente Fechado') {
+                presente.src = "./img/presente-aberto.gif";
+                presente.alt = "Presente Aberto";
+            } else{
+                
+                presente.src = "./img/presente-fechado.gif";
+                presente.alt = "Presente Fechado";
+            }
+            /* document.querySelector("#presente").src = "./img/presente-aberto.gif";
+           Acima ele alterou a imagem de presente fechado para aberto, procurando pelo "id" o local 
+            que se quer alterar, informando o elemento a ser alterado e o que se quer colocar. 
+            document.querySelector("#presente").alt = "Presente Aberto"; */
+        }
+    </script>
+</body>
+
+</html>

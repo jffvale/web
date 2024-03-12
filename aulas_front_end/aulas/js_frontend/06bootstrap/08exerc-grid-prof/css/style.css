@@ -1,0 +1,19 @@
+header{
+    /* Pega o Header todo ao invés de somente a NAV */
+    background-color: #8B0000;
+    min-height: 10vh;
+}
+
+main{
+    min-height: 60vh;
+}
+
+#menu-lateral{
+    background-color: #EDEDED;
+    padding: 20px;
+}
+
+footer{
+    background-color: #454545;
+    padding: 20px;
+}

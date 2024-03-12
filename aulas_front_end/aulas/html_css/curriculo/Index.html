@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - João de Freitas</title>
+    <style>
+        body {
+            color: white;
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        ul {
+            /* display: flex;: Isso define o modelo de layout flexí­vel para o elemento <ul>. 
+            O modelo de layout flexí­vel (display: flex;) permite que os itens filho do <ul> 
+            se ajustem dinamicamente ao espaço disponí­vel. */
+            display: flex;
+
+            /* justify-content: space-between;: Dentro do contexto do modelo de layout flexível, 
+            justify-content controla o alinhamento dos itens ao longo do eixo principal. Neste caso, 
+            space-between distribui uniformemente os itens ao longo do eixo principal, maximizando o espaço entre eles.*/
+            justify-content: space-between;
+
+            /* list-style-type: none;: Remove os marcadores de lista padrão. Ou seja, não haverá, 
+            pontos, números ou outro estilo de marcador padrão antes dos itens da lista.*/
+            list-style-type: none;
+
+            /* align-items: center;: Dentro do modelo de layout flexí­vel, align-items controla o alinhamento 
+            dos itens ao longo do eixo transversal. Neste caso, center centraliza os itens verticalmente.*/
+            align-items: center;
+
+            /* padding: 16px;: Adiciona um preenchimento interno de 16 pixels ao redor do <ul>. Isso cria 
+                um espaço interno entre a borda do elemento e seus itens.*/
+            padding: 16px;
+        }
+
+        a {
+            color: white;
+
+            /* text-decoration: none;: Remove a decoração padrão de texto nos links. A decoração padrão 
+            normalmente inclui um sublinhado que indica visualmente que o texto é um link. Definindo 
+            text-decoration como none, os links aparecerão sem sublinhado.*/
+            text-decoration: none;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        header img {
+            background-color: white;
+            width: 150px;
+            height: 150px;
+
+            /* border-radius: 50%: Aplica um raio de borda de 50% (círculo), o que cria uma borda arredondada 
+            para a imagem. Isso faz com que a imagem tenha a aparência de um círculo, já que a borda 
+            arredondada é aplicada igualmente a todos os lados. Valores menores que 50% forma um retangulo 
+            com as bordas arredondadas. Maior que 50% não ví diferença.*/
+            border-radius: 50%;
+
+            /* border: 5px solid #5BBE42;: Adiciona uma borda sólida à imagem. A borda tem 5 pixels de largura 
+            e é colorida em verde (#5BBE42). Isso cria um contorno ao redor da imagem.*/
+            border: 3px solid #5BBE42;
+        }
+
+        .center {
+            /* O ponto na frente do nome indica que será aplicado na classe de nome "center".*/
+            text-align: center;
+        }
+
+        h1 {
+            color: #4297be;
+        }
+
+        h2 {
+            color: #b2be42;
+        }
+
+        h3 {
+            color: #063f58;
+        }
+
+        footer img {
+            width: 40px;
+            height: 40px;
+            border-radius: 20%;
+        }
+
+        footer {
+            display: flex;
+            justify-content: center;
+        }
+
+        footer a {
+            color: #F4A460;
+            margin: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            /* margin-top: Xpx;: Adiciona uma margem superior de "X" pixels a todos os parágrafos 
+            . Isso cria um espaço entre o topo de cada parágrafo e outros elementos. A margem pode 
+            ser ajustada conforme necessário para controlar o espaçamento superior dos parágrafos.*/
+            margin-top: 5px;
+        }
+
+        .container {
+            /*padding: 0px 50px;: Define o preenchimento interno (espaço dentro do elemento) para 
+            os elementos com a classe ".container". A propriedade padding aceita até quatro valores, 
+            que representam o preenchimento nas direções superior, direita, inferior e esquerda, respectivamente.
+        0px: Não há preenchimento na direção superior.
+        50px: há um preenchimento de 50 pixels na direção direita e esquerda.*/
+            padding: 0px 50px;
+        }
+
+        nav a {
+            color: blue;
+            font-size: 20px;
+        }
+
+        /* Este trecho de código CSS estiliza os elementos de "<a>" dentro de um elemento "<nav>" 
+            quando estão sendo "hovered" (quando o cursor do mouse passa e fica sobre o elemento 
+            ele altera a cor dele para a cor designada). */
+        nav a:hover {
+            color: #5BBE42;
+        }
+
+        .contact-form input {
+            /* width: usando porcentagem;: Define a largura dos elementos de input como xxx% da 
+            largura do container pai. 100% faz com que os inputs ocupem toda a largura disponível 
+            no formulário, tornando-os responsivos. */
+            width: 100%;
+            padding: 8px 0;
+
+            /* margin: 8px 0;: Adiciona margem de 8 pixels na direção superior e inferior aos inputs. 
+            Isso cria um espaço externo entre os inputs e outros elementos ao redor, proporcionando 
+            um espaçamento visualmente agradável. */
+            margin: 8px 0;
+        }
+
+        .contact-form input[type=text] {
+            /* height: 100px;: Define a altura dos elementos de input do tipo texto como 100 pixels. 
+            Isso ajusta a altura dos inputs, tornando-os mais altos do que o padrão. */
+            height: 100px;
+        }
+
+        button {
+            color: black;
+            background-color: white;
+
+            /* border: none: Remove a borda dos botões. Isso significa que os botões não terão uma borda visí­vel. */
+            border: none;
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<!-- ctrl + K + C - comando do "Visual Studio Code" para comentar partes do código,
+basta selecionar a área do texto que você deseja fazer como comentário e  apertar 
+a sequência de teclas "ctrl + K + C" -->
+
+<body>
+
+    <a id="top"></a>
+    <div class="container">
+        <nav>
+            <ul>
+                <!-- links sem sublinhado, configurado no CSS -->
+                <li>
+                    <a href="index.html">Sobre mim</a>
+                </li>
+                <li>
+                    <a href="projetos.html">Projetos</a>
+                </li>
+                <li>
+                    <a href="contato.html">Contato</a>
+                </li>
+            </ul>
+        </nav>
+
+        <header>
+            <div class="center">
+                <img src="foto.png"></img>
+            </div>
+            <h1>João de Freitas Filho</h1>
+            <h2>Área de interesse - Desenvolvedor WEB</h2>
+        </header>
+
+        <main>
+            <section>
+                <h3>Experiência Profissional</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis
+                    nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore
+                    eu fugiat nulla pariatur.
+                    Ut enim ad minim veniam, quis
+                    nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat.
+                    Ut enim ad minim veniam, quis
+                    nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat exercitation ullamco laboris nisi ut aliquip.
+                </p>
+            </section>
+            <section>
+                <h3>Formação Acadêmica</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis
+                    nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore
+                    eu fugiat nulla pariatur.
+                    Ut enim ad minim veniam, quis
+                    nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat.
+                    Ut enim ad minim veniam, quis
+                    nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat exercitation ullamco laboris nisi ut aliquip.
+                </p>
+            </section>
+            <section>
+                <h3>Cursos</h3>
+                <p>Desenvolvedor WEB - Front End</p>
+                <p>Desenvolvedor WEB - Back End</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis
+                    nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore
+                    eu fugiat nulla pariatur.
+                    Ut enim ad minim veniam, quis
+                    nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat.
+                    Ut enim ad minim veniam, quis
+                    nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat exercitation ullamco laboris nisi ut aliquip.
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                <img src="github.png"></img>
+                <p>Github</p>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                <img src="linkedin.png"></img>
+                <p>Linkedin</p>
+            </a>
+            <a href="https://www.youtube.com/c/" target="_blank" rel="noopener noreferrer">
+                <img src="youtube.png"></img>
+                <p>Youtube</p>
+            </a>
+            <div>
+                <a href="#top">top</a>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
